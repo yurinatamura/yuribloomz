@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>yuribloomz — For your special someone</title>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#d3eaf8;--ink:#0e4733;--card:#f2f9fd;--on:#d3eaf8;--line:#0e4733;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b2a20;--ink:#d3eaf8;--card:#12382b;--on:#0b2a20;--line:#6fae9a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b2a20;--ink:#d3eaf8;--card:#12382b;--on:#0b2a20;--line:#6fae9a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Times New Roman",Times,"Liberation Serif",serif;overflow-x:hidden}
+.shell{position:relative;z-index:1;display:flex;min-height:100vh}
+.blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blobs i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(70px,-55px) scale(1.18)}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .blobs i{opacity:.3}}
+@media (prefers-reduced-motion:reduce){.blobs i{animation:none}}
+.side{position:sticky;top:0;align-self:flex-start;display:flex;flex-direction:column;gap:12px;width:200px;flex:none;padding:44px 20px}
+.side .m{display:block;width:100%;margin:0;font:inherit;font-size:1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-align:left;text-decoration:none;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:11px 20px;cursor:pointer;opacity:1}
+.side .m:hover,.side .m.on{background:var(--ink);color:var(--on)}
+main{flex:1;min-width:0;max-width:620px;margin:0 auto;padding:40px 5vw 40px;text-align:center}
+.panel{display:none}.panel.on{display:block}
+.story{text-align:center;text-indent:2em;font-size:1.2rem;line-height:1.65;max-width:500px;margin:0 auto 18px}
+.soon{font-size:1.6rem;font-style:italic;margin:10px 0}
+@media (max-width:700px){.shell{flex-direction:column}.side{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;width:auto;padding:18px 5vw 0}.side .m{width:auto;padding:9px 16px;font-size:.9rem}main{padding-top:24px}}
+.pic{width:min(250px,62vw);height:auto;display:block;margin:0 auto 6px;transform:rotate(3deg);filter:drop-shadow(0 10px 10px rgba(8,40,28,.25))}
+h1{font-family:Sacramento,"Brush Script MT",cursive;font-weight:400;font-size:clamp(1.6rem,8.4vw,3rem);line-height:1.2;margin:10px 0 8px;white-space:nowrap}
+.hint{font-weight:400;font-style:italic;font-size:1rem}
+.sub{font-size:1.3rem;font-style:italic;margin:0 0 14px}
+.note{font-size:1.1rem;line-height:1.5;margin:0 auto 30px;max-width:480px}
+form{text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:28px 24px;box-shadow:0 12px 30px rgba(14,71,51,.12)}
+label,.lab{display:block;font-size:1.1rem;font-weight:700;margin:18px 0 6px}
+form>label:first-child{margin-top:0}
+input[type=text],input[type=tel],input[type=email],textarea{width:100%;font:inherit;font-size:1.1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px}
+input:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:1px}
+textarea{min-height:120px;resize:vertical}
+.sizes{display:flex;gap:10px;flex-wrap:wrap}
+.pill{margin:0;font-weight:400}
+.pill input{position:absolute;opacity:0;pointer-events:none}
+.pill span{display:inline-block;padding:9px 22px;border:1.5px solid var(--line);border-radius:999px;font-size:1.1rem;cursor:pointer;background:var(--bg)}
+.pill input:checked+span{background:var(--ink);color:var(--on)}
+.pill input:focus-visible+span{outline:2px solid var(--ink);outline-offset:2px}
+button{display:block;width:100%;margin-top:26px;font:inherit;font-size:1.2rem;font-weight:700;background:var(--ink);color:var(--on);border:0;border-radius:999px;padding:13px;cursor:pointer}
+button:hover{opacity:.88}
+#thanks{display:none;text-align:center;padding:16px 0}
+#thanks p{font-size:1.2rem;margin:0}
+.send{display:inline-block;margin:18px 0 14px;background:var(--ink);color:var(--on);text-decoration:none;font-weight:700;font-size:1.15rem;border-radius:999px;padding:12px 28px}
+#copy{width:100%;min-height:150px;font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;text-align:left;resize:vertical}
+footer{text-align:center;padding:6px 0 34px;font-size:1rem}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<div class="blobs" aria-hidden="true">
+  <i style="left:-6%;top:6%;width:380px;height:380px;background:#ff9fb5"></i>
+  <i style="left:62%;top:-8%;width:440px;height:440px;background:#7dbdf0;animation-duration:22s;animation-delay:-6s"></i>
+  <i style="left:78%;top:48%;width:360px;height:360px;background:#6aa9e6;animation-duration:20s;animation-delay:-3s"></i>
+  <i style="left:8%;top:62%;width:420px;height:420px;background:#ffc2d1;animation-duration:24s;animation-delay:-10s"></i>
+  <i style="left:40%;top:38%;width:300px;height:300px;background:#ffa68f;animation-duration:17s;animation-delay:-8s"></i>
+  <i style="left:46%;top:86%;width:340px;height:340px;background:#9ad0f5;animation-duration:26s;animation-delay:-14s"></i>
+</div>
+<div class="shell">
+<nav class="side">
+  <button class="m on" data-tab="form">Order</button>
+  <button class="m" data-tab="story">Story</button>
+  <button class="m" data-tab="events">Events</button>
+  <a class="m" href="https://www.instagram.com/yuribloomz" target="_blank" rel="noopener">Socials</a>
+  <button class="m" data-tab="contact">Contact</button>
+</nav>
+<main>
+  <img class="pic" alt="Hand-wrapped bouquet of pink mums, lily buds, baby’s breath and red berries" src="bouquet-cutout.webp">
+  <div class="panel on" id="p-form">
+  <h1>For your special someone</h1>
+  <p class="sub">Fresh, hand-tied bouquets made with love.</p>
+  <p class="note">Once the form is received, within 3 days, I will reach out to you through text and email to finalize the order, where we can discuss any additional requests and price negotiations.</p>
+  <form id="f">
+    <label for="n">Name</label><input id="n" name="name" type="text" required autocomplete="name">
+    <label for="p">Phone number</label><input id="p" name="phone" type="tel" required autocomplete="tel">
+    <label for="e">Email</label><input id="e" name="email" type="email" required autocomplete="email">
+    <span class="lab">Size</span>
+    <div class="sizes">
+      <label class="pill"><input type="radio" name="size" value="Small" required><span>Small</span></label>
+      <label class="pill"><input type="radio" name="size" value="Medium"><span>Medium</span></label>
+      <label class="pill"><input type="radio" name="size" value="Large"><span>Large</span></label>
+    </div>
+    <label for="fl">Flowers <span class="hint">(2 for small, 3 for medium, 4 for large)</span></label><input id="fl" name="flowers" type="text" placeholder="e.g. lilies, peonies, baby’s breath">
+    <label for="q">Additional inquiry</label><textarea id="q" name="inquiry"></textarea>
+    <button type="submit">Send inquiry</button>
+  </form>
+  <div id="thanks" style="display:none"><h1>Thank you!</h1><p>Your email app should open with your order details ready. Just press send and it will reach me. If nothing opened, use the button below.</p><a id="mail" class="send" href="#">Open email</a><textarea id="copy" readonly aria-label="Order details"></textarea></div>
+  </div>
+  <div class="panel" id="p-story">
+    <h1>Hello!</h1>
+    <p class="story">I’m Yurina, and I was born and raised in Seattle, WA, and I’m now located in Orange County, CA.</p>
+    <p class="story">When I first moved here, I was amazed by the quality and vibrance of the flowers thanks to Southern California’s warm environment, which even offers tulips for a bouquet in November. That inspired me to start flower arranging as one of my endeavors.</p>
+    <p class="story">As someone in my early twenties trying to fight corporate burnout, I hope we can both help each other out, one bouquet at a time.</p>
+  </div>
+  <div class="panel" id="p-events">
+    <h1>Events</h1>
+    <p class="soon">Coming Soon!</p>
+  </div>
+  <div class="panel" id="p-contact">
+    <h1>Contact</h1>
+    <p class="note">Questions or special requests? Email me anytime at</p>
+    <p style="font-size:1.4rem;margin:0"><a href="mailto:yurinatamura17@gmail.com" style="color:inherit">yurinatamura17@gmail.com</a></p>
+  </div>
+</main>
+</div>
+<script>
+const tabs=[...document.querySelectorAll('[data-tab]')];
+function show(n){if(!document.getElementById('p-'+n))n='form';tabs.forEach(b=>b.classList.toggle('on',b.dataset.tab===n));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p-'+n));try{history.replaceState(null,'','#'+n)}catch(e){}}
+tabs.forEach(b=>b.onclick=()=>show(b.dataset.tab));
+show((location.hash||'#form').slice(1));
+window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+document.getElementById('f').addEventListener('submit',e=>{
+ e.preventDefault();const d=new FormData(e.target);
+ const body=['Name: '+d.get('name'),'Phone: '+d.get('phone'),'Email: '+d.get('email'),'Size: '+d.get('size'),'Flowers: '+(d.get('flowers')||'none given'),'','Additional inquiry:',d.get('inquiry')||'none'].join('\n');
+ const url='mailto:yurinatamura17@gmail.com?subject='+encodeURIComponent('Bouquet order from '+d.get('name'))+'&body='+encodeURIComponent(body);
+ document.getElementById('mail').href=url;document.getElementById('copy').value='To: yurinatamura17@gmail.com\n\n'+body;
+ e.target.style.display='none';document.getElementById('thanks').style.display='block';
+ try{location.href=url}catch(err){}
+});
+</script>
+</body>
+</html>
